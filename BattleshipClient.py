@@ -2,7 +2,7 @@ import socket
 
 #   TODO clean up any other input errors or other types of errors that could awry from people being stupid
 
-host = "104.39.236.100"
+host = "Place your server here"
 port = 5051
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 s.connect((host, port))
