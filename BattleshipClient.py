@@ -2,7 +2,7 @@ import socket
 
 #   TODO clean up any other input errors or other types of errors that could awry from people being stupid
 
-host = "Place your server here"
+host = "add server ip here"
 port = 5051
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 s.connect((host, port))
@@ -84,7 +84,7 @@ def ship5_place():
             if an.lower() == "row" or an.lower() == "r":
                 an2 = input("\nGo to the right(r) or the left(l) on the row: ")
                 if an2.lower() == "left" or an2.lower() == "l":
-                    if (ship_row - 4) < 0:
+                    if (ship_col - 4) < 0:
                         print("\nLand Ho!\n")
                     else:
                         board[ship_row][ship_col] = 'S'
@@ -97,7 +97,7 @@ def ship5_place():
                         print("")
                         break
                 elif an2.lower() == "right" or an2.lower() == "r":
-                    if ship_row not in range(10) or ship_col not in range(10):
+                    if (ship_col + 4) > 9:
                         print("\nLand Ho!\n")
                     else:
                         board[ship_row][ship_col] = 'S'
@@ -128,7 +128,7 @@ def ship5_place():
                         print("")
                         break
                 elif an3.lower() == "down" or an3 == "d":
-                    if ship_row not in range(10) or ship_col not in range(10):
+                    if (ship_row + 4) > 9:
                         print("\nLand Ho!\n")
                     else:
                         board[ship_row][ship_col] = 'S'
@@ -187,7 +187,7 @@ def ship4_place():
             if an.lower() == "row" or an.lower() == "r":
                 an2 = input("\nGo to the right(r) or the left(l) on the row: ")
                 if an2.lower() == "left" or an2.lower() == "l":
-                    if (ship_row - 3) < 0:
+                    if (ship_col - 3) < 0:
                         print("\nLand Ho!\n")
                     else:
                         board[ship_row][ship_col] = 'S'
@@ -199,7 +199,7 @@ def ship4_place():
                         print("")
                         break
                 elif an2.lower() == "right" or an2 == "l":
-                    if ship_row not in range(10) or ship_col not in range(10):
+                    if (ship_col + 3) > 9:
                         print("\nLand Ho!\n")
                     else:
                         board[ship_row][ship_col] = 'S'
@@ -228,7 +228,7 @@ def ship4_place():
                         print("")
                         break
                 elif an3.lower() == "down" or an3.lower() == "d":
-                    if ship_row not in range(10) or ship_col not in range(10):
+                    if (ship_row + 3) > 9:
                         print("\nLand Ho!\n")
                     else:
                         board[ship_row][ship_col] = 'S'
@@ -286,7 +286,7 @@ def ship3_place():
             if an.lower() == "row" or an.lower() == "r":
                 an2 = input("\nGo to the right(r) or the left(l) on the row: ")
                 if an2 == "left" or an2.lower() == "l":
-                    if (ship_row - 2) < 0:
+                    if (ship_col - 2) < 0:
                         print("\nLand Ho!\n")
                     else:
                         board[ship_row][ship_col] = 'S'
@@ -297,7 +297,7 @@ def ship3_place():
                         print("")
                         break
                 elif an2.lower() == "right" or an2.lower() == "r":
-                    if ship_row not in range(10) or ship_col not in range(10):
+                    if (ship_col + 2) > 9:
                         print("\nLand Ho!\n")
                     else:
                         board[ship_row][ship_col] = 'S'
@@ -324,7 +324,7 @@ def ship3_place():
                         print("")
                         break
                 elif an3.lower() == "down" or an3.lower() == "d":
-                    if ship_row not in range(10) or ship_col not in range(10):
+                    if (ship_row + 2) > 9:
                         print("Land Ho!")
                     else:
                         board[ship_row][ship_col] = 'S'
@@ -381,7 +381,7 @@ def ship32_place():
             if an.lower() == "row" or an.lower() == "r":
                 an2 = input("\nGo to the right(r) or the left(l) on the row: ")
                 if an2.lower() == "left" or an2.lower() == "l":
-                    if (ship_row - 2) < 0:
+                    if (ship_col - 2) < 0:
                         print("\nLand Ho!\n")
                     else:
                         board[ship_row][ship_col] = 'S'
@@ -392,7 +392,7 @@ def ship32_place():
                         print("")
                         break
                 elif an2.lower() == "right" or an2.lower() == "r":
-                    if ship_row not in range(10) or ship_col not in range(10):
+                    if (ship_col + 2) > 9:
                         print("\nLand Ho!\n")
                     else:
                         board[ship_row][ship_col] = 'S'
@@ -419,7 +419,7 @@ def ship32_place():
                         print("")
                         break
                 elif an3.lower() == "down" or an3.lower() == "d":
-                    if ship_row not in range(10) or ship_col not in range(10):
+                    if (ship_row + 2) > 9:
                         print("\nLand Ho!\n")
                     else:
                         board[ship_row][ship_col] = 'S'
@@ -476,7 +476,7 @@ def ship2_place():
             if an.lower() == "row" == an.lower() == "r":
                 an2 = input("\nGo to the right(r) or the left(l) on the row: ")
                 if an2.lower() == "left" or an2.lower() == "l":
-                    if (ship_row - 1) < 0:
+                    if (ship_col - 1) < 0:
                         print("\nLand Ho!\n")
                     else:
                         board[ship_row][ship_col] = 'S'
@@ -486,7 +486,7 @@ def ship2_place():
                         print("")
                         break
                 elif an2.lower() == "right" or an2.lower() == "r":
-                    if ship_row not in range(10) or ship_col not in range(10):
+                    if (ship_col + 1) > 9:
                         print("\nLand Ho!\n")
                     else:
                         board[ship_row][ship_col] = 'S'
@@ -511,7 +511,7 @@ def ship2_place():
                         print("")
                         break
                 elif an3.lower() == "down" or an3.lower() == "d":
-                    if ship_row not in range(10) or ship_col not in range(10):
+                    if (ship_row + 1) > 9:
                         print("\nLand Ho!\n")
                     else:
                         board[ship_row][ship_col] = 'S'
@@ -548,25 +548,25 @@ def play1():
             else:
                 print("\nColumn wasn't a number\n")
             if guess_row.lower() == "a":
-                guess_row = 1
+                guess_row = 0
             elif guess_row.lower() == "b":
-                guess_row = 2
+                guess_row = 1
             elif guess_row.lower() == "c":
-                guess_row = 3
+                guess_row = 2
             elif guess_row.lower() == "d":
-                guess_row = 4
+                guess_row = 3
             elif guess_row.lower() == "e":
-                guess_row = 5
+                guess_row = 4
             elif guess_row.lower() == "f":
-                guess_row = 6
+                guess_row = 5
             elif guess_row.lower() == "g":
-                guess_row = 7
+                guess_row = 6
             elif guess_row.lower() == "h":
-                guess_row = 8
+                guess_row = 7
             elif guess_row.lower() == "i":
-                guess_row = 9
+                guess_row = 8
             elif guess_row.lower() == "j":
-                guess_row = 10
+                guess_row = 9
             else:
                 print("\nRow wasn't a letter between A and J\n")
 
@@ -578,13 +578,13 @@ def play1():
             if not data:
                 break
             if data == "miss":
-                board2[int(guess_row) - 1][int(guess_col) - 1] = "X"
+                board2[int(guess_row)][int(guess_col)] = "X"
                 print("")
                 print_board2(board2)
                 print("")
                 break
             elif data == "hit":
-                board2[int(guess_row) - 1][int(guess_col) - 1] = "S"
+                board2[int(guess_row)][int(guess_col)] = "S"
                 print("")
                 print_board2(board2)
                 print("")
@@ -598,8 +598,8 @@ def play1():
             p2guess_col = s.recv(1024)
             p2guess_col = p2guess_col.decode("utf-8")
             p2guess_row = p2guess_row.decode("utf-8")
-            p2guess_col = int(p2guess_col) - 1
-            p2guess_row = int(p2guess_row) - 1
+            p2guess_col = int(p2guess_col)
+            p2guess_row = int(p2guess_row)
             if board[int(p2guess_row)][int(p2guess_col)] == "X":
                 print("\nThey already hit that location idiots.\n")
             elif board[int(p2guess_row)][int(p2guess_col)] == 'S':
@@ -640,8 +640,8 @@ def play2():
             p2guess_col = s.recv(1024)
             p2guess_col = p2guess_col.decode("utf-8")
             p2guess_row = p2guess_row.decode("utf-8")
-            p2guess_col = int(p2guess_col) - 1
-            p2guess_row = int(p2guess_row) - 1
+            p2guess_col = int(p2guess_col)
+            p2guess_row = int(p2guess_row)
             if board[p2guess_row][p2guess_col] == "X":
                 print("\nThey already hit that location idiots.\n")
             elif board[p2guess_row][p2guess_col] == 'S':
@@ -669,25 +669,25 @@ def play2():
             else:
                 print("\nColumn wasn't a number\n")
             if guess_row.lower() == "a":
-                guess_row = 1
+                guess_row = 0
             elif guess_row.lower() == "b":
-                guess_row = 2
+                guess_row = 1
             elif guess_row.lower() == "c":
-                guess_row = 3
+                guess_row = 2
             elif guess_row.lower() == "d":
-                guess_row = 4
+                guess_row = 3
             elif guess_row.lower() == "e":
-                guess_row = 5
+                guess_row = 4
             elif guess_row.lower() == "f":
-                guess_row = 6
+                guess_row = 5
             elif guess_row.lower() == "g":
-                guess_row = 7
+                guess_row = 6
             elif guess_row.lower() == "h":
-                guess_row = 8
+                guess_row = 7
             elif guess_row.lower() == "i":
-                guess_row = 9
+                guess_row = 8
             elif guess_row.lower() == "j":
-                guess_row = 10
+                guess_row = 9
             else:
                 print("Row wasn't a letter between A and J")
 
@@ -699,13 +699,13 @@ def play2():
             if not data:
                 break
             if data == "miss":
-                board2[int(guess_row) - 1][int(guess_col) - 1] = "X"
+                board2[int(guess_row)][int(guess_col)] = "X"
                 print("")
                 print_board2(board2)
                 print("")
                 break
             elif data == "hit":
-                board2[int(guess_row) - 1][int(guess_col) - 1] = "S"
+                board2[int(guess_row)][int(guess_col)] = "S"
                 print("")
                 print_board2(board2)
                 print("\nYou get to go again\n")
