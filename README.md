@@ -16,3 +16,6 @@ For use over wan use the server internet ip given from your isp for the client M
 Currently in the bug fixing stage so comment if any happen for you
 
 What I would like to add to the code is encrytped connnection and a gui
+
+                                              Known Bugs:
+There is problems placing ships its a bit finicky 
