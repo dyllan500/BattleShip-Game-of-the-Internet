@@ -1,5 +1,5 @@
 # Battleship-Game-of-the-Internet
-Work in progress scripts that will allow muliple players the ablity to play a crude battleship game over the internet
+Work in progress scripts that will allow multiple players the ability to  play a crude battleship game over the internet
 
 All you need to chage the ip in client to the ip address of the server 
 Make sure the ports match each other 
