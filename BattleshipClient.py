@@ -2,7 +2,7 @@ import socket
 
 #   TODO clean up any other input errors or other types of errors that could awry from people being stupid
 
-host = "add servers ip here"
+host = "104.39.236.100"
 port = 5051
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 s.connect((host, port))
@@ -48,7 +48,7 @@ def ship5_place():
         print("\nStarting Position of Boat\n")
         ship_row = input("Ship Row: ")
         ship_col = input("Ship Column: ")
-        if ship_col.isdigit() == "True":
+        if ship_col.isdigit() == True:
             ship_col = int(ship_col) - 1
         else:
             print("\nColumn wasn't a number\n")
@@ -152,7 +152,7 @@ def ship4_place():
         print("\nStarting Position of Boat\n")
         ship_row = input("Ship Row: ")
         ship_col = input("Ship Column: ")
-        if ship_col.isdigit() == "True":
+        if ship_col.isdigit() == True:
             ship_col = int(ship_col) - 1
         else:
             print("\nColumn wasn't a number\n")
@@ -251,7 +251,7 @@ def ship3_place():
         print("\nStarting Position of Boat\n")
         ship_row = input("Ship Row: ")
         ship_col = input("Ship Column: ")
-        if ship_col.isdigit() == "True":
+        if ship_col.isdigit() == True:
             ship_col = int(ship_col) - 1
         else:
             print("\nColumn wasn't a number\n")
@@ -318,7 +318,7 @@ def ship3_place():
                     else:
                         board[ship_row][ship_col] = 'S'
                         board[ship_row - 1][ship_col] = 'S'
-                        board[ship_row - 1][ship_col] = 'S'
+                        board[ship_row - 2][ship_col] = 'S'
                         print("\nShip Placed\n")
                         print_board(board)
                         print("")
@@ -329,7 +329,7 @@ def ship3_place():
                     else:
                         board[ship_row][ship_col] = 'S'
                         board[ship_row + 1][ship_col] = 'S'
-                        board[ship_row + 1][ship_col] = 'S'
+                        board[ship_row + 2][ship_col] = 'S'
                         print("\nShip Placed\n")
                         print_board(board)
                         print("")
@@ -346,7 +346,7 @@ def ship32_place():
         print("\nStarting Position of Boat\n")
         ship_row = input("Ship Row: ")
         ship_col = input("Ship Column: ")
-        if ship_col.isdigit() == "True":
+        if ship_col.isdigit() == True:
             ship_col = int(ship_col) - 1
         else:
             print("\nColumn wasn't a number\n")
@@ -413,7 +413,7 @@ def ship32_place():
                     else:
                         board[ship_row][ship_col] = 'S'
                         board[ship_row - 1][ship_col] = 'S'
-                        board[ship_row - 1][ship_col] = 'S'
+                        board[ship_row - 2][ship_col] = 'S'
                         print("\nShip Placed\n")
                         print_board(board)
                         print("")
@@ -424,7 +424,7 @@ def ship32_place():
                     else:
                         board[ship_row][ship_col] = 'S'
                         board[ship_row + 1][ship_col] = 'S'
-                        board[ship_row + 1][ship_col] = 'S'
+                        board[ship_row + 2][ship_col] = 'S'
                         print("\nShip Placed\n")
                         print_board(board)
                         print("")
@@ -441,7 +441,7 @@ def ship2_place():
         print("\nStarting Position of Boat\n")
         ship_row = input("Ship Row: ")
         ship_col = input("Ship Column: ")
-        if ship_col.isdigit() == "True":
+        if ship_col.isdigit() == True:
             ship_col = int(ship_col) - 1
         else:
             print("\nColumn wasn't a number\n")
@@ -543,7 +543,7 @@ def play1():
             print("")
             guess_row = input("Guess Row: ")
             guess_col = input("Guess Col: ")
-            if guess_col.isdigit() == "True":
+            if guess_col.isdigit() == True:
                 guess_col = int(guess_col) - 1
             else:
                 print("\nColumn wasn't a number\n")
@@ -570,8 +570,8 @@ def play1():
             else:
                 print("\nRow wasn't a letter between A and J\n")
 
-            s.send(("p1|" + guess_row).encode("utf-8"))
-            s.send(("p1|" + guess_col).encode("utf-8"))
+            s.send(("p1|" + str(guess_row)).encode("utf-8"))
+            s.send(("p1|" + str(guess_col)).encode("utf-8"))
             data = s.recv(1024)
             data = data.decode("utf-8")
             print("\n" + data + "\n")
@@ -664,7 +664,7 @@ def play2():
         while True:
             guess_row = input("Guess Row: ")
             guess_col = input("Guess Col: ")
-            if guess_col.isdigit() == "True":
+            if guess_col.isdigit() == True:
                 guess_col = int(guess_col) - 1
             else:
                 print("\nColumn wasn't a number\n")
@@ -691,8 +691,8 @@ def play2():
             else:
                 print("Row wasn't a letter between A and J")
 
-            s.send(("p2|" + guess_row).encode("utf-8"))
-            s.send(("p2|" + guess_col).encode("utf-8"))
+            s.send(("p2|" + str(guess_row)).encode("utf-8"))
+            s.send(("p2|" + str(guess_col)).encode("utf-8"))
             data = s.recv(1024)
             data = data.decode("utf-8")
             print("\n" + data + "\n")
