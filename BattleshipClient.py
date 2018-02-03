@@ -2,7 +2,7 @@ import socket
 
 #   TODO clean up any other input errors or other types of errors that could awry from people being stupid
 
-host = "add server ip here"
+host = "Add server ip here"
 port = 5051
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 s.connect((host, port))
@@ -86,6 +86,9 @@ def ship5_place():
                 if an2.lower() == "left" or an2.lower() == "l":
                     if (ship_col - 4) < 0:
                         print("\nLand Ho!\n")
+                    elif board[ship_row][ship_col - 1] == 'S' or board[ship_row][ship_col - 2] == 'S' or \
+                                    board[ship_row][ship_col - 3] == 'S' or board[ship_row][ship_col - 4] == 'S':
+                        print("\nShip Wreak!\n")
                     else:
                         board[ship_row][ship_col] = 'S'
                         board[ship_row][ship_col - 1] = 'S'
@@ -99,6 +102,9 @@ def ship5_place():
                 elif an2.lower() == "right" or an2.lower() == "r":
                     if (ship_col + 4) > 9:
                         print("\nLand Ho!\n")
+                    elif board[ship_row][ship_col + 1] == 'S' or board[ship_row][ship_col + 2] == 'S' or \
+                                    board[ship_row][ship_col + 3] == 'S' or board[ship_row][ship_col + 4] == 'S':
+                        print("\nShip Wreak!\n")
                     else:
                         board[ship_row][ship_col] = 'S'
                         board[ship_row][ship_col + 1] = 'S'
@@ -117,6 +123,9 @@ def ship5_place():
                 if an3.lower() == "up" or an3 == "u":
                     if (ship_row - 4) < 0:
                         print("\nLand Ho!\n")
+                    elif board[ship_row + 1][ship_col] == 'S' or board[ship_row + 2][ship_col] == 'S' or \
+                                    board[ship_row + 3][ship_col] == 'S' or board[ship_row + 4][ship_col] == 'S':
+                        print("\nShip Wreak!\n")
                     else:
                         board[ship_row][ship_col] = 'S'
                         board[ship_row - 1][ship_col] = 'S'
@@ -130,6 +139,9 @@ def ship5_place():
                 elif an3.lower() == "down" or an3 == "d":
                     if (ship_row + 4) > 9:
                         print("\nLand Ho!\n")
+                    elif board[ship_row + 1][ship_col] == 'S' or board[ship_row + 2][ship_col] == 'S' or \
+                                    board[ship_row + 3][ship_col] == 'S' or board[ship_row + 4][ship_col] == 'S':
+                        print("\nShip Wreak!\n")
                     else:
                         board[ship_row][ship_col] = 'S'
                         board[ship_row + 1][ship_col] = 'S'
@@ -189,6 +201,9 @@ def ship4_place():
                 if an2.lower() == "left" or an2.lower() == "l":
                     if (ship_col - 3) < 0:
                         print("\nLand Ho!\n")
+                    elif board[ship_row][ship_col - 1] == 'S' or board[ship_row][ship_col - 2] == 'S' or \
+                                    board[ship_row][ship_col - 3] == 'S':
+                        print("\nShip Wreak!\n")
                     else:
                         board[ship_row][ship_col] = 'S'
                         board[ship_row][ship_col - 1] = 'S'
@@ -201,6 +216,9 @@ def ship4_place():
                 elif an2.lower() == "right" or an2 == "l":
                     if (ship_col + 3) > 9:
                         print("\nLand Ho!\n")
+                    elif board[ship_row][ship_col + 1] == 'S' or board[ship_row][ship_col + 2] == 'S' or \
+                                    board[ship_row][ship_col + 3] == 'S':
+                        print("\nShip Wreak!\n")
                     else:
                         board[ship_row][ship_col] = 'S'
                         board[ship_row][ship_col + 1] = 'S'
@@ -218,6 +236,9 @@ def ship4_place():
                 if an3.lower() == "up" or an3.lower() == "u":
                     if (ship_row - 3) < 0:
                         print("\nLand Ho!\n")
+                    elif board[ship_row - 1][ship_col] == 'S' or board[ship_row - 2][ship_col] == 'S' or \
+                                    board[ship_row - 3][ship_col] == 'S':
+                        print("\nShip Wreak!\n")
                     else:
                         board[ship_row][ship_col] = 'S'
                         board[ship_row - 1][ship_col] = 'S'
@@ -230,6 +251,9 @@ def ship4_place():
                 elif an3.lower() == "down" or an3.lower() == "d":
                     if (ship_row + 3) > 9:
                         print("\nLand Ho!\n")
+                    elif board[ship_row + 1][ship_col] == 'S' or board[ship_row + 2][ship_col] == 'S' or \
+                                    board[ship_row + 3][ship_col] == 'S':
+                        print("\nShip Wreak!\n")
                     else:
                         board[ship_row][ship_col] = 'S'
                         board[ship_row + 1][ship_col] = 'S'
@@ -288,6 +312,8 @@ def ship3_place():
                 if an2 == "left" or an2.lower() == "l":
                     if (ship_col - 2) < 0:
                         print("\nLand Ho!\n")
+                    elif board[ship_row][ship_col - 1] == 'S' or board[ship_row][ship_col - 2] == 'S':
+                        print("\nShip Wreak!\n")
                     else:
                         board[ship_row][ship_col] = 'S'
                         board[ship_row][ship_col - 1] = 'S'
@@ -299,6 +325,8 @@ def ship3_place():
                 elif an2.lower() == "right" or an2.lower() == "r":
                     if (ship_col + 2) > 9:
                         print("\nLand Ho!\n")
+                    elif board[ship_row][ship_col + 1] == 'S' or board[ship_row][ship_col + 2] == 'S':
+                        print("\nShip Wreak!\n")
                     else:
                         board[ship_row][ship_col] = 'S'
                         board[ship_row][ship_col + 1] = 'S'
@@ -315,6 +343,8 @@ def ship3_place():
                 if an3.lower() == "up" or an3.lower() == "u":
                     if (ship_row - 2) < 0:
                         print("\nLand Ho!\n")
+                    elif board[ship_row - 1][ship_col] == 'S' or board[ship_row - 2][ship_col] == 'S':
+                        print("\nShip Wreak!\n")
                     else:
                         board[ship_row][ship_col] = 'S'
                         board[ship_row - 1][ship_col] = 'S'
@@ -326,6 +356,8 @@ def ship3_place():
                 elif an3.lower() == "down" or an3.lower() == "d":
                     if (ship_row + 2) > 9:
                         print("Land Ho!")
+                    elif board[ship_row + 1][ship_col] == 'S' or board[ship_row + 2][ship_col] == 'S':
+                        print("\nShip Wreak!\n")
                     else:
                         board[ship_row][ship_col] = 'S'
                         board[ship_row + 1][ship_col] = 'S'
@@ -383,6 +415,8 @@ def ship32_place():
                 if an2.lower() == "left" or an2.lower() == "l":
                     if (ship_col - 2) < 0:
                         print("\nLand Ho!\n")
+                    elif board[ship_row][ship_col - 1] == 'S' or board[ship_row][ship_col - 2] == 'S':
+                        print("\nShip Wreak!\n")
                     else:
                         board[ship_row][ship_col] = 'S'
                         board[ship_row][ship_col - 1] = 'S'
@@ -394,6 +428,8 @@ def ship32_place():
                 elif an2.lower() == "right" or an2.lower() == "r":
                     if (ship_col + 2) > 9:
                         print("\nLand Ho!\n")
+                    elif board[ship_row][ship_col + 1] == 'S' or board[ship_row][ship_col + 2] == 'S':
+                        print("\nShip Wreak!\n")
                     else:
                         board[ship_row][ship_col] = 'S'
                         board[ship_row][ship_col + 1] = 'S'
@@ -410,6 +446,8 @@ def ship32_place():
                 if an3.lower() == "up" or an3.lower() == "u":
                     if (ship_row - 2) < 0:
                         print("\nLand Ho!\n")
+                    elif board[ship_row - 1][ship_col] == 'S' or board[ship_row - 2][ship_col] == 'S':
+                        print("\nShip Wreak!\n")
                     else:
                         board[ship_row][ship_col] = 'S'
                         board[ship_row - 1][ship_col] = 'S'
@@ -421,6 +459,8 @@ def ship32_place():
                 elif an3.lower() == "down" or an3.lower() == "d":
                     if (ship_row + 2) > 9:
                         print("\nLand Ho!\n")
+                    elif board[ship_row + 1][ship_col] == 'S' or board[ship_row + 2][ship_col] == 'S':
+                        print("\nShip Wreak!\n")
                     else:
                         board[ship_row][ship_col] = 'S'
                         board[ship_row + 1][ship_col] = 'S'
@@ -478,6 +518,8 @@ def ship2_place():
                 if an2.lower() == "left" or an2.lower() == "l":
                     if (ship_col - 1) < 0:
                         print("\nLand Ho!\n")
+                    elif board[ship_row][ship_col - 1] == 'S':
+                        print("\nShip Wreak!\n")
                     else:
                         board[ship_row][ship_col] = 'S'
                         board[ship_row][ship_col - 1] = 'S'
@@ -488,6 +530,8 @@ def ship2_place():
                 elif an2.lower() == "right" or an2.lower() == "r":
                     if (ship_col + 1) > 9:
                         print("\nLand Ho!\n")
+                    elif board[ship_row][ship_col + 1] == 'S':
+                        print("\nShip Wreak!\n")
                     else:
                         board[ship_row][ship_col] = 'S'
                         board[ship_row][ship_col + 1] = 'S'
@@ -503,6 +547,8 @@ def ship2_place():
                 if an3.lower() == "up" or an3.lower() == "u":
                     if (ship_row - 1) < 0:
                         print("\nLand Ho!\n")
+                    elif board[ship_row - 1][ship_col] == 'S':
+                        print("\nShip Wreak!\n")
                     else:
                         board[ship_row][ship_col] = 'S'
                         board[ship_row - 1][ship_col] = 'S'
@@ -513,6 +559,8 @@ def ship2_place():
                 elif an3.lower() == "down" or an3.lower() == "d":
                     if (ship_row + 1) > 9:
                         print("\nLand Ho!\n")
+                    elif board[ship_row + 1][ship_col] == 'S':
+                        print("\nShip Wreak!\n")
                     else:
                         board[ship_row][ship_col] = 'S'
                         board[ship_row + 1][ship_col] = 'S'
