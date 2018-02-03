@@ -19,3 +19,4 @@ What I would like to add to the code is encrytped connnection and a gui
 
                                               Known Bugs:
 There is problems placing ships its a bit finicky 
+May have fixed it, but could still be weird
