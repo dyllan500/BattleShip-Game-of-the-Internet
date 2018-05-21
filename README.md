@@ -1,4 +1,4 @@
-# Battleship-Game-of-the-Internet
+# Multiplayer-Online-Battleship-Game
 Work in progress scripts that will allow multiple players the ability to  play a crude battleship game over the internet
 
 This is overly expanted verison of battleship that the codecademy python course used to teach lists and functions
